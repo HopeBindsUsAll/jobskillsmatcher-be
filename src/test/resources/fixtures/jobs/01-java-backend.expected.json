@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/java", "esco/skill/sql", "esco/skill/postgresql", "esco/skill/rest-api", "esco/skill/git", "esco/skill/unit-testing"],
+  "preferred": ["esco/skill/kubernetes", "esco/skill/terraform"]
+}

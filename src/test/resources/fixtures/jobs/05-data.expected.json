@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/sql", "esco/skill/postgresql", "esco/skill/python", "esco/skill/pandas", "esco/skill/numpy", "esco/skill/data-analysis"],
+  "preferred": ["esco/skill/machine-learning", "esco/skill/redis"]
+}

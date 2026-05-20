@@ -1,0 +1,13 @@
+Full-Stack Engineer
+
+Key responsibilities:
+- Build features end to end with Node.js, Express, and React
+- Author database migrations on PostgreSQL
+
+Required skills:
+- JavaScript and TypeScript
+- HTML and CSS
+
+Pluses:
+- AWS deployment experience
+- Docker familiarity

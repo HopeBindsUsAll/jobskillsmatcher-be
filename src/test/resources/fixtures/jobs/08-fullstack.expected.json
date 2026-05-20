@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/nodejs", "esco/skill/react", "esco/skill/postgresql", "esco/skill/javascript", "esco/skill/typescript", "esco/skill/html", "esco/skill/css"],
+  "preferred": ["esco/skill/aws", "esco/skill/docker"]
+}

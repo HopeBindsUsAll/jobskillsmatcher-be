@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Keeps Spring Boot's default console logging (via base.xml) and adds an
+  appender that buffers WARN/ERROR events for persistence into the audit_log
+  table. logging.level.* in application.yaml still applies.
+-->
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="AUDIT_DB"
+              class="com.jobskillsmatcher.auditlog.impl.logback.AuditLogQueueAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+    </appender>
+
+    <root>
+        <appender-ref ref="AUDIT_DB"/>
+    </root>
+</configuration>

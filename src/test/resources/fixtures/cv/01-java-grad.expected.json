@@ -1,0 +1,13 @@
+{
+  "skills": [
+    "esco/skill/java",
+    "esco/skill/spring-boot",
+    "esco/skill/sql",
+    "esco/skill/postgresql",
+    "esco/skill/git",
+    "esco/skill/rest-api",
+    "esco/skill/unit-testing",
+    "esco/skill/docker",
+    "esco/skill/ci-cd"
+  ]
+}

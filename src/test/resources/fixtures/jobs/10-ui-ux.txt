@@ -1,0 +1,12 @@
+Senior Product Designer
+
+What you'll do:
+- Lead Figma component libraries
+- Run user research with our customers
+- Champion accessibility (WCAG 2.2)
+
+Required:
+- HTML and CSS literacy
+
+Extra credit:
+- Familiarity with React for design-system implementation

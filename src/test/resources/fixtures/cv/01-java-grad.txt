@@ -1,0 +1,13 @@
+Jane Doe
+Computer Science Graduate
+
+Education
+BSc Computer Science, Some University, 2024
+
+Skills
+Java, Spring Boot, SQL, PostgreSQL, Git, REST API design, Unit Testing with JUnit.
+Some experience with Docker and continuous integration pipelines.
+
+Experience
+Backend Intern at Acme — built REST endpoints in Java/Spring Boot,
+wrote PostgreSQL queries, used Git daily, contributed to CI/CD.

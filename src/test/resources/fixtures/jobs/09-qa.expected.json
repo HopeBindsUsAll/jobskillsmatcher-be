@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/unit-testing", "esco/skill/integration-testing", "esco/skill/selenium", "esco/skill/test-driven-development"],
+  "preferred": ["esco/skill/python", "esco/skill/java"]
+}

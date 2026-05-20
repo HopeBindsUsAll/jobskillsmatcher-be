@@ -1,0 +1,13 @@
+Frontend Engineer
+
+You'll own our customer-facing React application.
+
+Requirements:
+- 2+ years of TypeScript and React
+- Solid HTML and CSS
+- Experience with REST API integration
+- Git version control
+
+Bonus points:
+- GraphQL
+- Figma

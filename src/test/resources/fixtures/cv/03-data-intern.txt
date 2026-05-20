@@ -1,0 +1,11 @@
+Alex Rivera — Data Science Intern
+
+Skills
+Python, pandas, NumPy, SQL, data analysis, machine learning, TensorFlow.
+Comfortable with Linux and basic shell scripting (bash).
+
+Experience
+Data Intern at Beta Labs:
+- Wrote Python and pandas pipelines for exploratory data analysis (EDA)
+- Trained machine learning models in TensorFlow
+- Queried PostgreSQL with SQL for reporting

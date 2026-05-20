@@ -1,0 +1,10 @@
+John Smith
+Frontend Developer
+
+Skills: HTML, CSS, JavaScript, TypeScript, React, accessibility (a11y).
+Familiar with Figma for design handoff and unit testing using Jest.
+
+Projects
+- Built a single-page React application with TypeScript
+- Improved CSS and HTML accessibility (WCAG) on a public website
+- Wrote Jest unit tests for the React component library

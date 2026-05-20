@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/figma", "esco/skill/user-research", "esco/skill/accessibility", "esco/skill/html", "esco/skill/css"],
+  "preferred": ["esco/skill/react"]
+}

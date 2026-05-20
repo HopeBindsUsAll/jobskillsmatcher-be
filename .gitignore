@@ -1,0 +1,55 @@
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+HELP.md
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac ###
+.DS_Store
+
+### Env ###
+.env
+.env.local
+application-local-override.yaml
+
+### JWT signing keys (dev only — generate locally, never commit) ###
+src/main/resources/jwt/private.pem
+src/main/resources/jwt/public.pem
+
+### Secrets generated locally for Cloud Run deploy (never commit) ###
+secrets/
+
+### Claude Code session settings ###
+.claude/
+
+### Logs ###
+*.log

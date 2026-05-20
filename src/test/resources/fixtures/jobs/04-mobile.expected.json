@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/android-development", "esco/skill/kotlin", "esco/skill/ios-development", "esco/skill/java", "esco/skill/object-oriented-programming"],
+  "preferred": ["esco/skill/react-native", "esco/skill/swift"]
+}

@@ -1,0 +1,13 @@
+Mobile Engineer (Android)
+
+What you'll do:
+- Ship features for our Android application using Kotlin
+- Collaborate with iOS engineers on shared APIs
+
+Must have:
+- Solid Java fundamentals
+- Object-oriented programming
+
+Would be a plus:
+- React Native experience
+- Swift familiarity

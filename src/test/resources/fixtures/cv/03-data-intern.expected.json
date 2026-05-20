@@ -1,0 +1,14 @@
+{
+  "skills": [
+    "esco/skill/python",
+    "esco/skill/pandas",
+    "esco/skill/numpy",
+    "esco/skill/sql",
+    "esco/skill/data-analysis",
+    "esco/skill/machine-learning",
+    "esco/skill/tensorflow",
+    "esco/skill/linux",
+    "esco/skill/shell-scripting",
+    "esco/skill/postgresql"
+  ]
+}

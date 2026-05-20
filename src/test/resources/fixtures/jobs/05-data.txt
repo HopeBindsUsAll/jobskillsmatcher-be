@@ -1,0 +1,10 @@
+Data Engineer
+
+Required qualifications:
+- Strong SQL and PostgreSQL
+- Python with pandas and NumPy
+- Data analysis pipelines
+
+Nice-to-have:
+- Machine learning fundamentals
+- Redis caching layer experience

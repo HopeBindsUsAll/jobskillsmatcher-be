@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/web-security", "esco/skill/cryptography", "esco/skill/authentication"],
+  "preferred": ["esco/skill/http-protocol", "esco/skill/linux"]
+}

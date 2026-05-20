@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/kubernetes", "esco/skill/terraform", "esco/skill/aws", "esco/skill/ci-cd", "esco/skill/linux", "esco/skill/shell-scripting", "esco/skill/docker"],
+  "preferred": ["esco/skill/microservices"]
+}

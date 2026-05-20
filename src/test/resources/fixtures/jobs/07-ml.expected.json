@@ -1,0 +1,4 @@
+{
+  "required": ["esco/skill/python", "esco/skill/machine-learning", "esco/skill/deep-learning", "esco/skill/tensorflow"],
+  "preferred": ["esco/skill/distributed-systems", "esco/skill/linux", "esco/skill/shell-scripting"]
+}

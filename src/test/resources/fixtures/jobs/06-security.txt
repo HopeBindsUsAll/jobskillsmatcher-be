@@ -1,0 +1,10 @@
+Application Security Engineer
+
+You have:
+- Web application security expertise
+- Hands-on applied cryptography
+- Understanding of authentication and authorization
+
+Bonus skills:
+- HTTP protocol internals
+- Linux server hardening

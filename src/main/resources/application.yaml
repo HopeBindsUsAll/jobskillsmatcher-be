@@ -1,0 +1,187 @@
+spring:
+  application:
+    name: jobskillsmatcher
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/jobskillsmatcher}
+    username: ${DB_USER:jsm}
+    password: ${DB_PASS:jsm}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  security:
+    jwt:
+      private: ${JWT_PRIVATE_KEY:classpath:jwt/private.pem}
+      public: ${JWT_PUBLIC_KEY:classpath:jwt/public.pem}
+      lifetime: ${JWT_LIFETIME:PT1H}
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:}
+            client-secret: ${GOOGLE_CLIENT_SECRET:}
+            scope:
+              - email
+              - profile
+        provider:
+          google:
+            user-name-attribute: email
+  mail:
+    host: ${MAIL_HOST:}
+    port: ${MAIL_PORT:25}
+    username: ${MAIL_USER:}
+    password: ${MAIL_PASS:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  mvc:
+    problemdetails:
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+
+server:
+  port: ${SERVER_PORT}
+  servlet:
+    context-path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when-authorized
+  health:
+    mail:
+      enabled: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+  api-docs:
+    path: /v3/api-docs
+
+jobskillsmatcher:
+  oauth:
+    spa-redirect: ${OAUTH_SPA_REDIRECT:http://localhost:5173/oauth/callback}
+  auditlog:
+    drain-ms: ${AUDITLOG_DRAIN_MS:5000}
+    retention-cron: ${AUDITLOG_RETENTION_CRON:0 30 3 * * *}
+    retention-days:
+      audit: ${AUDITLOG_RETENTION_AUDIT_DAYS:180}
+      system: ${AUDITLOG_RETENTION_SYSTEM_DAYS:30}
+  matching:
+    alpha: 0.6
+    proficiency-weights:
+      BEGINNER: 0.33
+      INTERMEDIATE: 0.66
+      ADVANCED: 0.85
+      EXPERT: 1.0
+    requirement-weights:
+      REQUIRED: 1.0
+      PREFERRED: 0.5
+    extra-skill-penalty: 0.0
+    # When true (default), score = how well the student covers the job's requirements.
+    # Unrelated student skills are ignored. Set false to fall back to symmetric Jaccard +
+    # full-vocabulary cosine, which penalises a student for owning skills the job didn't ask for.
+    coverage-mode: true
+  jsearch:
+    base-url: https://jsearch.p.rapidapi.com
+    api-key: ${RAPIDAPI_KEY:}
+    rate-limit:
+      capacity: 100
+      refill-per-day: 100
+  linkedin:
+
+    base-url: ${LINKEDIN_BASE_URL:https://linkedin-job-search-api.p.rapidapi.com}
+    api-key: ${RAPIDAPI_KEY:}
+    path: ${LINKEDIN_PATH:/active-jb-24h}
+    limit: 25
+    rate-limit:
+      capacity: 100
+      refill-per-day: 100
+  groq:
+    base-url: ${GROQ_BASE_URL:https://api.groq.com}
+    api-key: ${GROQ_API_KEY:}
+    model: ${GROQ_MODEL:llama-3.3-70b-versatile}
+    enabled: ${GROQ_ENABLED:true}
+    rate-limit:
+      capacity: 30
+      refill-per-minute: 30
+  cache:
+    job-feed-ttl: 5m
+    esco-skills-ttl: 1h
+    readiness-score-ttl: 2m
+  cors:
+    allowed-origins: http://localhost:5173, https://vercel.app
+  cv:
+    max-bytes: 10485760
+    accepted-content-types:
+      - application/pdf
+      - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+
+logging:
+  level:
+    root: INFO
+    com.jobskillsmatcher: INFO
+
+---
+# ---------------------------------------------------------------------------
+# Profile: test  (no DB / mail / oauth autoconfig — slice & unit tests)
+# ---------------------------------------------------------------------------
+spring:
+  config:
+    activate:
+      on-profile: test
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration
+      - org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration
+      - org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration
+  security:
+    jwt:
+      private: classpath:jwt/private.pem
+      public: classpath:jwt/public.pem
+      lifetime: PT1H
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${TEST_GOOGLE_CLIENT_ID:test-client-id}
+            client-secret: ${TEST_GOOGLE_CLIENT_SECRET:test-client-secret}
+            scope:
+              - email
+              - profile
+        provider:
+          google:
+            user-name-attribute: email
+
+server:
+  port: 0
+
+jobskillsmatcher:
+  cors:
+    allowed-origins: http://localhost:5173
+  local:
+    admin-email: ${LOCAL_ADMIN_EMAIL:admin@local}
+    admin-password: ${LOCAL_ADMIN_PASSWORD:Admin123!}

@@ -1,0 +1,9 @@
+QA Automation Engineer
+
+Required:
+- Unit testing and integration testing fundamentals
+- Selenium experience
+- Test-driven development discipline
+
+Good to have:
+- Python or Java for test scaffolding

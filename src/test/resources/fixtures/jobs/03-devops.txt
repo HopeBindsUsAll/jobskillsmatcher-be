@@ -1,0 +1,13 @@
+Site Reliability Engineer
+
+Responsibilities:
+- Operate Kubernetes clusters in production
+- Author Terraform modules for AWS infrastructure
+- Build CI/CD pipelines and own the Linux base image
+
+Required:
+- Strong shell scripting
+- Docker
+
+Preferred experience:
+- Microservices architecture at scale

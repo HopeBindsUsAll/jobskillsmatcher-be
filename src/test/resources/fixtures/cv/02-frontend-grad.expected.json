@@ -1,0 +1,12 @@
+{
+  "skills": [
+    "esco/skill/html",
+    "esco/skill/css",
+    "esco/skill/javascript",
+    "esco/skill/typescript",
+    "esco/skill/react",
+    "esco/skill/accessibility",
+    "esco/skill/figma",
+    "esco/skill/unit-testing"
+  ]
+}
